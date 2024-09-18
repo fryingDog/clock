@@ -4,8 +4,20 @@
   <meta charset="UTF-8">
   <title>学校用時計</title>
     <script type="text/javascript" src='./script.js'></script>
+  <script>
+function displayDate() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1;
+  const day = today.getDate();
+  document.getElementById("dateDisplay").innerText = `${year}年${month}月${day}日`;
+}
+
+window.onload = displayDate;
+</script>
 </head>
 <body>
+<h1>今日の日付は<span id="dateDisplay"></span>です。</h1>
 <p><div id="clock" style="font-size: 270px;"></div><font size="6"></font></div></p>
 
   <script>
